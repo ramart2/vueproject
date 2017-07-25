@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div id="app">
-		<div v-bind:title="randNum">
+		<div v-bind:title="randNum" v-if="shown">
 			Hover for a random number.
 		</div>
 	</div>
@@ -15,7 +15,8 @@
 		var app = new Vue({
 			el: '#app',
 			data: {
-				randNum: Math.floor(Math.random() * 50) + 1
+				randNum: Math.floor(Math.random() * 50) + 1,
+				shown: true
 			}
 		})
 	</script>
